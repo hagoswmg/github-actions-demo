@@ -1,8 +1,6 @@
 # Workflow Name
 name: Hello World 2
 
-
-name: CI/CD Pipeline
 on: [push]
 
 jobs:
