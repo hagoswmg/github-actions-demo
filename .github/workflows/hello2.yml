@@ -5,7 +5,6 @@ on: [push]
 
 jobs:
   job1:
-    name: Runs on Ubuntu Latest Test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -19,14 +18,12 @@ jobs:
         echo hello second line
 
   job2:
-    name: Runs on Windows Latest Test
     runs-on: windows-latest
     steps:
-      name: Run one line script on windows
-      run: echo hello world from windows
+      - name: Run one line script on windows
+        run: echo hello world from windows
 
-      name: Run multiple line script from windows
-
-      run: |
-        echo "The first line in windows"
-        echo "The second line in windows"
+      - name: Run multiple line script from windows
+        run: |
+          echo "The first line in windows"
+          echo "The second line in windows"
